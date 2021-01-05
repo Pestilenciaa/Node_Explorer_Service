@@ -8,7 +8,7 @@ User=node_exporter
 Group=node_exporter
 Type=simple
 
-ExecStart=/opt/node_exporter/node_exporter --web.listen-address=0.0.0.0:9100 --log.level=info --log.format=json --collector.logind --collector.systemd --collector.tcpstat --collector.ntp --collector.interrupts  --collector.meminfo_numa --collector.processes --no-collector.bonding --no-collector.bcache --no-collector.arp --no-collector.edac --no-collector.infiniband --no-collector.ipvs --no-collector.mdadm --no-collector.nfs --no-collector.nfsd --no-collector.textfile --no-collector.wifi --no-collector.hwmon --no -collector.conntrack --no-collector.timex --no-collector.zfs --collector.systemd.unit-whitelist=(crond|sshd|node_exporter)\\.service
+ExecStart=/usr/local/bin/node_exporter-1.0.1.linux-amd64/node_exporter --web.listen-address=0.0.0.0:9182 --log.level=info --log.format=json --collector.logind --collector.systemd --collector.tcpstat --collector.ntp --collector.interrupts  --collector.meminfo_numa --collector.processes --no-collector.bonding --no-collector.bcache --no-collector.arp --no-collector.edac --no-collector.infiniband --no-collector.ipvs --no-collector.mdadm --no-collector.nfs --no-collector.nfsd --no-collector.textfile --no-collector.wifi --no-collector.hwmon --no -collector.conntrack --no-collector.timex --no-collector.zfs --collector.systemd.unit-whitelist=(crond|sshd|node_exporter)\\.service
 
 ExecReload=/bin/kill -HUP $MAINPID
 TimeoutStopSec=10s
